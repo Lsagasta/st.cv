@@ -1,8 +1,10 @@
 import streamlit as st
 
+st.set_page_config(page_title = "Lucas Sagasta",page_icon = "📊", layout="wide")
+
 def main():
 
-    st.sidebar.image("imgs/lucas.png", use_column_width=True)
+    st.sidebar.image("imgs/perfilLS.png", use_column_width=True)
     st.sidebar.write('"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
 
 
@@ -45,17 +47,21 @@ def main():
     st.header("Algunos de mis trabajos", divider="rainbow")  
     st.write("")
 
-    st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
 
-    col1,col3 = st.columns([3,4])
+    colA,colB = st.columns([4,4])
 
-    with col3:
-        st.image("imgs/seguimiento1.jpg")
+    with colA:
+        st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
+
+        col1,col3 = st.columns([3,4])
+
+        with col3:
+            st.image("imgs/seguimiento1.jpg")
 
   
 
-    with col1:
-        st.markdown("""
+        with col1:
+            st.markdown("""
 
 
 Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** de una distribuidora de **telas denim** a:
@@ -64,109 +70,217 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
 - Alcanzar sus metas de ventas mensuales.""")
         
 
-    expander = st.expander("Ver mas sobre este proyecto")
+        if st.button("Ver mas sobre este proyecto"):
+            st.switch_page("pages/2_bt.py")
 
-    expander.markdown("""
-Cada vendedor tiene establecido que debe realizar una visita a cada uno de sus clientes según la categoría del mismo. Los resultados de esta implementación son:
-
-- **Ayuda a la planificación de rutas**.
-- **Optimización del tiempo** en la rutina de visitas.
-- **Fortalecimiento de la relación** con los clientes.
-- **Identificación de nuevas oportunidades de venta** y respuesta a las necesidades emergentes.
-
-Desde gerencia, se pudo evaluar el rendimiento de cada vendedor, optimizando la gestión de la cartera de clientes, priorizando a los más importantes y asegurando que se les dedique suficiente tiempo y recursos.
-""")
-    
-
-    col3,col1 = expander.columns([2,4])
-
-    with col3:
-        st.image("imgs/seguimiento2.jpg")
-
-  
-
-    with col1:
         st.markdown("""
-### Proceso
-
-1. **Creación de Base de Datos**: El primer paso fue crear una base de datos en **Google Sheets** que estableciera la relación entre los vendedores y los clientes. Esta lista se actualiza semanalmente mediante una consulta SQL desde Google Sheets a la base de datos de la empresa.
-  
-2. **Integración de Visitas**: Luego, se integran las visitas realizadas en esta base. Para ello, se utilizó un conector hacia la API de la aplicación empleada por los vendedores para registrar las visitas y pedidos de los clientes.
-  
-3. **Construcción de la Base Consolidada**: Mediante un script, se construye una base consolidada que contiene toda la información necesaria para la construcción de los tableros.
-  
-4. **Creación de Tableros**: Se construyeron ocho tableros, uno para cada vendedor, y se otorgaron los permisos correspondientes, asegurando que solo el propio vendedor y los supervisores puedan visualizar su cartera.
-  
-5. **Reporte Automático**: Finalmente, se implementó un reporte automático que envía un correo con el resumen del día al cierre de la jornada laboral.
-
-""")
+    <style>
+        .tag-python {
+            background-color: #306998;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-powerbi {
+            background-color: #f2c811;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-looker {
+            background-color: #4285f4;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-sql {
+            background-color: #e34f26;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-appscript {
+            background-color: #34a853;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-grafana {
+            background-color: #f46800;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
         
-    st.write("")
+    </style>
 
-    st.markdown(''' ### **Tablero de Control para Centro de Atención Telefónica** ''')
+    <div>
+        <span class="tag-python">Python</span>
+        <span class="tag-powerbi">Power BI</span>
+        <span class="tag-looker">Looker</span>
+        <span class="tag-sql">SQL</span>
+        <span class="tag-appscript">Apps Script</span>
+        <span class="tag-grafana">Grafana</span>
 
-    col1, col3 = st.columns([3, 4])
+    </div>
+    """, unsafe_allow_html=True)
 
-    with col3:
-        st.image("imgs/call1.png")
 
-    with col1:
-        st.markdown("""
-    Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:
+    with colB:
 
-    - Monitorear el desempeño del área y de cada agente.
-    - Identificar áreas de mejora.
-    - Asegurar una operación eficiente.""")
+        st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
+
+        col1, col3 = st.columns([3, 4])
+
+        with col3:
+            st.image("imgs/call1.png")
+
+        with col1:
+            st.markdown("""
+        Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:
+
+        - Monitorear el desempeño del área y de cada agente.
+        - Identificar áreas de mejora.
+        - Asegurar una operación eficiente.""")
             
-    expander = st.expander("Ver más sobre este proyecto")
-
-    expander.markdown("""
-    ### Información mostrada en el tablero:
-    1. **Cantidad de llamadas:**
-    - Llamadas atendidas, salientes y perdidas.
-    2. **Porcentaje de llamadas atendidas** sobre el total.
-    3. **Horas habladas** entre todos los agentes.
-    4. **Cantidad de agentes conectados**.
-    5. **Análisis del tiempo de espera** de los usuarios antes de colgar.
-    6. **Desempeño detallado de cada agente**: llamadas contestadas y tiempo hablado.
-    7. **Informe de llamadas atendidas** en intervalos de 10 minutos.
-    8. **Informe de llamadas abandonadas** en intervalos de 10 minutos.
-    9. **Análisis de números no atendidos** y su seguimiento en llamadas sucesivas.
-
-    El tablero optimiza la gestión de recursos, mejora la experiencia del usuario y reconoce el desempeño de los agentes.
-    """)
-
-    col3, col1 = expander.columns([2, 4])
-
-    with col3:
-        st.image("imgs/call2.png")
-
-    with col1:
         st.markdown("""
-    ### Proceso
+    <style>
+        .tag-python {
+            background-color: #306998;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-powerbi {
+            background-color: #f2c811;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-looker {
+            background-color: #4285f4;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-sql {
+            background-color: #e34f26;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-appscript {
+            background-color: #34a853;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        .tag-grafana {
+            background-color: #f46800;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-right: 5px;
+        }
+        
+    </style>
 
-    1. **Limpieza de datos**: Los informes crudos recibidos del sistema **3CX** se procesaron en **Python**.
-    2. **Subida a SQL**: Los datos se almacenaron en una base de datos **SQL**.
-    3. **Visualización**: Se crearon gráficos en **Grafana** y con la biblioteca **Apache Echarts**.
-    4. **Automatización**: El tablero se actualiza con datos en tiempo real, proporcionando métricas clave.
+    <div>
+        <span class="tag-python">Python</span>
+        <span class="tag-powerbi">Power BI</span>
+        <span class="tag-looker">Looker</span>
+        <span class="tag-sql">SQL</span>
+        <span class="tag-appscript">Apps Script</span>
+        <span class="tag-grafana">Grafana</span>
 
-    ### Resultado
+    </div>
+    """, unsafe_allow_html=True)
 
-    Este tablero permitió monitorear el desempeño del centro en tiempo real, mejorando la eficiencia operativa y motivando a los agentes al contar con un sistema transparente y de reconocimiento.
-    """)
-    expander.image("imgs/call3.png")
-
-
-    
-
-    
-
+        if st.button("Ver mas sobre este proyecto", key = 1):
+            st.switch_page("pages/1_cat.py")
 
         
- 
 
 
-    
+    #--------------------------------
+
+    colA,colB = st.columns([4,4])
+
+    with colA:
+        st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
+
+        col1,col3 = st.columns([3,4])
+
+        with col3:
+            st.image("imgs/seguimiento1.jpg")
+
+  
+
+        with col1:
+            st.markdown("""
+
+
+Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** de una distribuidora de **telas denim** a:
+
+- Monitorear visitas a clientes.
+- Alcanzar sus metas de ventas mensuales.""")
+        
+
+        if st.button("Ver mas sobre este proyecto", key = 2):
+            st.switch_page("pages/2_bt.py")
+
+
+    with colB:
+
+        st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
+
+        col1, col3 = st.columns([3, 4])
+
+        with col3:
+            st.image("imgs/call1.png")
+
+        with col1:
+            st.markdown("""
+        Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:
+
+        - Monitorear el desempeño del área y de cada agente.
+        - Identificar áreas de mejora.
+        - Asegurar una operación eficiente.""")
+
+        if st.button("Ver mas sobre este proyecto", key = 3):
+            st.switch_page("pages/1_cat.py")
+        
+
+
+
+
+
+
+
+
 
 
 
