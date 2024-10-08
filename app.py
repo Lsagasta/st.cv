@@ -1,21 +1,41 @@
 import streamlit as st
 
+
+
+
 st.set_page_config(page_title = "Lucas Sagasta",page_icon = "📊", layout="wide")
 
 def main():
 
+    #Estilos CSS
+    with open('styles.css') as f:
+        st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
+
     st.sidebar.image("imgs/perfilLS.png", use_column_width=True)
     st.sidebar.write('"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
+        # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
+    with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
+        pdf_data = file.read()
+
+    # Crear el botón de descarga para el PDF
+    st.sidebar.download_button(
+        type= "secondary",
+        label="📄 Descarga mi CV",
+        data=pdf_data,
+        file_name="lucas-sagasta-cv.pdf",
+        mime="application/pdf",
+    )
 
 
 
-   
     st.header(" Lucas Sagasta", divider="rainbow")
     st.subheader("Analista de Datos - Científico de Datos - Especialista en IA")
+
+    
     
     
     st.write("")
-  
+
     st.write("📊 Soy un analista de datos especializado en el seguimiento de operaciones, ventas y logística.")
     st.write("💡 A lo largo de mi carrera, he diseñado soluciones de integración de datos y visualización de indicadores utilizando diversas plataformas y tecnologías, como SQL, Python, LookerStudio, Power BI, y Excel, para diferentes sectores industriales.")
     st.write("🛠️ Tengo experiencia en la recolección y procesamiento de datos, disposición, creación de dashboards, y automatización de reportes diarios vía correo electrónico.")
@@ -24,18 +44,25 @@ def main():
 
     st.write("")
 
+    st.subheader("Herramientas y Tecnologías:")
 
-    # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
-    with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
-        pdf_data = file.read()
+    st.markdown("""
+<div>
+    <span class="tag-python">Python</span>
+    <span class="tag-powerbi">Power BI</span>
+    <span class="tag-looker">Looker</span>
+    <span class="tag-sql">SQL</span>
+    <span class="tag-appscript">Apps Script</span>
+    <span class="tag-grafana">Grafana</span>
+    <span class="tag-Echarts">Apache Echarts</span>
+</div>
+""", unsafe_allow_html=True)
+    
+    st.write("")
 
-    # Crear el botón de descarga para el PDF
-    st.download_button(
-        label="Descarga mi CV",
-        data=pdf_data,
-        file_name="lucas-sagasta-cv.pdf",
-        mime="application/pdf",
-    )
+
+
+
     
 
 
@@ -58,7 +85,7 @@ def main():
         with col3:
             st.image("imgs/seguimiento1.jpg")
 
-  
+
 
         with col1:
             st.markdown("""
@@ -73,69 +100,10 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
         if st.button("Ver mas sobre este proyecto"):
             st.switch_page("pages/2_bt.py")
 
-        st.markdown("""
-    <style>
-        .tag-python {
-            background-color: #306998;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-powerbi {
-            background-color: #f2c811;
-            color: black;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-looker {
-            background-color: #4285f4;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-sql {
-            background-color: #e34f26;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-appscript {
-            background-color: #34a853;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-grafana {
-            background-color: #f46800;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
+
         
-    </style>
+        
 
-    <div>
-        <span class="tag-python">Python</span>
-        <span class="tag-powerbi">Power BI</span>
-        <span class="tag-looker">Looker</span>
-        <span class="tag-sql">SQL</span>
-        <span class="tag-appscript">Apps Script</span>
-        <span class="tag-grafana">Grafana</span>
-
-    </div>
-    """, unsafe_allow_html=True)
 
 
     with colB:
@@ -147,6 +115,9 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
         with col3:
             st.image("imgs/call1.png")
 
+        if st.button("Ver mas sobre este proyecto", key = 1):
+            st.switch_page("pages/1_cat.py")
+
         with col1:
             st.markdown("""
         Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:
@@ -155,72 +126,9 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
         - Identificar áreas de mejora.
         - Asegurar una operación eficiente.""")
             
-        st.markdown("""
-    <style>
-        .tag-python {
-            background-color: #306998;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-powerbi {
-            background-color: #f2c811;
-            color: black;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-looker {
-            background-color: #4285f4;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-sql {
-            background-color: #e34f26;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-appscript {
-            background-color: #34a853;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
-        .tag-grafana {
-            background-color: #f46800;
-            color: white;
-            padding: 5px 10px;
-            border-radius: 5px;
-            font-size: 14px;
-            margin-right: 5px;
-        }
         
-    </style>
 
-    <div>
-        <span class="tag-python">Python</span>
-        <span class="tag-powerbi">Power BI</span>
-        <span class="tag-looker">Looker</span>
-        <span class="tag-sql">SQL</span>
-        <span class="tag-appscript">Apps Script</span>
-        <span class="tag-grafana">Grafana</span>
 
-    </div>
-    """, unsafe_allow_html=True)
-
-        if st.button("Ver mas sobre este proyecto", key = 1):
-            st.switch_page("pages/1_cat.py")
 
         
 

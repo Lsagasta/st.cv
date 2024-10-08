@@ -1,0 +1,57 @@
+.tag-python {
+    background-color: #306998;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px ;
+}
+.tag-powerbi {
+    background-color: #f2c811;
+    color: black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
+.tag-looker {
+    background-color: #4285f4;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
+.tag-sql {
+    background-color: #e34f26;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
+.tag-appscript {
+    background-color: #34a853;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
+.tag-grafana {
+    background-color: #f46800;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
+/* Example for custom tag */
+.tag-Echarts {
+    background-color: #9b59b6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    margin: 5px;
+}
