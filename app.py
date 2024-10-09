@@ -1,39 +1,36 @@
 import streamlit as st
 
 
+st.set_page_config(page_title="Lucas Sagasta - Data Analyst",
+                   page_icon="📊", layout="wide")
 
-
-st.set_page_config(page_title = "Lucas Sagasta",page_icon = "📊", layout="wide")
 
 def main():
 
-    #Estilos CSS
+    # Estilos CSS
     with open('styles.css') as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    st.sidebar.image("imgs/perfilLS.png", use_column_width=True)
-    st.sidebar.write('"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
-        # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
+    st.sidebar.image("imgs/perfilLS.png", width=150)
+    st.sidebar.write(
+        '"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
+    # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
     with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
         pdf_data = file.read()
 
     # Crear el botón de descarga para el PDF
     st.sidebar.download_button(
-        type= "secondary",
+        type="secondary",
         label="📄 Descarga mi CV",
         data=pdf_data,
         file_name="lucas-sagasta-cv.pdf",
         mime="application/pdf",
     )
 
-
-
     st.header(" Lucas Sagasta", divider="rainbow")
-    st.subheader("Analista de Datos - Científico de Datos - Especialista en IA")
+    st.subheader(
+        "Analista de Datos - Científico de Datos - Especialista en IA")
 
-    
-    
-    
     st.write("")
 
     st.write("📊 Soy un analista de datos especializado en el seguimiento de operaciones, ventas y logística.")
@@ -57,54 +54,52 @@ def main():
     <span class="tag-Echarts">Apache Echarts</span>
 </div>
 """, unsafe_allow_html=True)
-    
-    st.write("")
-
-
-
-
-    
-
 
     st.write("")
 
+    st.write("")
 
     st.write("")
 
-    st.header("Algunos de mis trabajos", divider="rainbow")  
+    st.header("Algunos de mis trabajos", divider="rainbow")
     st.write("")
 
 
-    colA,colB = st.columns([4,4])
-
+# PRIMER FILA DE TRABAJOS
+    colA, colB = st.columns([4, 4])
+# SEGUIMIENTOS DE VISITAS
     with colA:
         st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
+        st.markdown("""
+<div>
+    <span class="tag-python">Python</span>
+    <span class="tag-powerbi">Power BI</span>
+    <span class="tag-looker">Looker</span>
 
-        col1,col3 = st.columns([3,4])
+</div>
+""", unsafe_allow_html=True)
+
+        st.write("")
+
+        col1, col3 = st.columns([3, 4])
 
         with col3:
             st.image("imgs/seguimiento1.jpg")
-
-
 
         with col1:
             st.markdown("""
 
 
-Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** de una distribuidora de **telas denim** a:
+Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** de una distribuidora de **telas denim** a:""")
 
-- Monitorear visitas a clientes.
+        st.markdown("""- Monitorear visitas a clientes.
 - Alcanzar sus metas de ventas mensuales.""")
-        
 
         if st.button("Ver mas sobre este proyecto"):
             st.switch_page("pages/2_bt.py")
 
 
-        
-        
-
-
+# MONITOREO LLAMADAS
 
     with colB:
 
@@ -115,52 +110,41 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
         with col3:
             st.image("imgs/call1.png")
 
-        if st.button("Ver mas sobre este proyecto", key = 1):
-            st.switch_page("pages/1_cat.py")
-
         with col1:
             st.markdown("""
-        Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:
-
+        Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:""")
+        st.markdown(""" 
         - Monitorear el desempeño del área y de cada agente.
         - Identificar áreas de mejora.
         - Asegurar una operación eficiente.""")
-            
-        
+        if st.button("Ver mas sobre este proyecto", key=1):
+            st.switch_page("pages/1_cat.py")
 
+    # SEGUNDA FILA DE TRABAJOS
 
-
-        
-
-
-    #--------------------------------
-
-    colA,colB = st.columns([4,4])
-
+    colA, colB = st.columns([4, 4])
+# CONIG
     with colA:
-        st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
+        st.markdown(''' ### **Conectar Igualdad 2021-2023** ''')
 
-        col1,col3 = st.columns([3,4])
+        col1, col3 = st.columns([3, 4])
 
         with col3:
-            st.image("imgs/seguimiento1.jpg")
-
-  
+            st.image("imgs/conig.png")
 
         with col1:
             st.markdown("""
 
 
-Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** de una distribuidora de **telas denim** a:
+Tablero que tiene como objetivo mostrar el avance de los programas **Conectar Igualdad** y el **Programa de Conectividad Nacional** durante el periodo comprendido entre 2021 y 2023.
+""")
+        st.markdown("""
+- Monitoreo de estado de la entrega de Netbooks
+- Monitoreo del estado de conectividad y tipo de equipamiento instalado.""")
 
-- Monitorear visitas a clientes.
-- Alcanzar sus metas de ventas mensuales.""")
-        
-
-        if st.button("Ver mas sobre este proyecto", key = 2):
+        if st.button("Ver mas sobre este proyecto", key=2):
             st.switch_page("pages/2_bt.py")
-
-
+# TABLERO 4
     with colB:
 
         st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
@@ -168,30 +152,19 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
         col1, col3 = st.columns([3, 4])
 
         with col3:
-            st.image("imgs/call1.png")
+            st.image("imgs/psl.png")
 
         with col1:
             st.markdown("""
         Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:
-
+        """)
+        st.markdown("""
         - Monitorear el desempeño del área y de cada agente.
         - Identificar áreas de mejora.
         - Asegurar una operación eficiente.""")
 
-        if st.button("Ver mas sobre este proyecto", key = 3):
+        if st.button("Ver mas sobre este proyecto", key=3):
             st.switch_page("pages/1_cat.py")
-        
-
-
-
-
-
-
-
-
-
-
-
 
 
 # ------------------------------------
