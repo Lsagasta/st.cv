@@ -1,17 +1,18 @@
 import streamlit as st
 
 
-st.set_page_config(page_title="Lucas Sagasta - Data Analyst",
-                   page_icon="📊", layout="wide")
+st.set_page_config(page_title="Lucas Sagasta - Data Analyst",page_icon="📊", layout="wide")
 
 
 def main():
 
-    # Estilos CSS
+    # Importo Estilos CSS
     with open('styles.css') as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    st.sidebar.image("imgs/perfilLS.png", width=150)
+# ----------- SIDEBAR -------------
+
+    st.sidebar.image("imgs/perfilLS.png", use_column_width = True)
     st.sidebar.write(
         '"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
     # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
@@ -26,8 +27,10 @@ def main():
         file_name="lucas-sagasta-cv.pdf",
         mime="application/pdf",
     )
+# ----------- /SIDEBAR/ -------------
 
-    st.header(" Lucas Sagasta", divider="rainbow")
+
+    st.header(" Lucas Sebastián Sagasta", divider="rainbow")
     st.subheader(
         "Analista de Datos - Científico de Datos - Especialista en IA")
 
@@ -41,19 +44,7 @@ def main():
 
     st.write("")
 
-    st.subheader("Herramientas y Tecnologías:")
-
-    st.markdown("""
-<div>
-    <span class="tag-python">Python</span>
-    <span class="tag-powerbi">Power BI</span>
-    <span class="tag-looker">Looker</span>
-    <span class="tag-sql">SQL</span>
-    <span class="tag-appscript">Apps Script</span>
-    <span class="tag-grafana">Grafana</span>
-    <span class="tag-Echarts">Apache Echarts</span>
-</div>
-""", unsafe_allow_html=True)
+    
 
     st.write("")
 
@@ -70,33 +61,56 @@ def main():
 # SEGUIMIENTOS DE VISITAS
     with colA:
         st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
-        st.markdown("""
-<div>
-    <span class="tag-python">Python</span>
-    <span class="tag-powerbi">Power BI</span>
-    <span class="tag-looker">Looker</span>
 
-</div>
-""", unsafe_allow_html=True)
 
-        st.write("")
+        st.markdown("""Tablero para móviles diseñado para ayudar a sus vendedores a mantenerse al día con las visitas a sus cartera de clientes y alcanzar sus metas de ventas mensuales. 
+                    \nEste tablero permite monitorear las visitas realizadas, sus objetivos de ventas, y visualizar de manera clara y sencilla su progreso hacia dichas metas. 
+                    \nAdemás, el tablero integra información actualizada automáticamente, asegurando que los vendedores siempre tengan acceso a datos precisos y al día. 
+                    \nLa iniciativa busca no solo optimizar la eficiencia operativa, sino también fortalecer las relaciones comerciales mediante una atención regular y oportuna con cada cliente.""")
 
-        col1, col3 = st.columns([3, 4])
+
+
+
+
+        col1, col3 = st.columns([.5, .5],vertical_alignment="center")
 
         with col3:
             st.image("imgs/seguimiento1.jpg")
+            
 
         with col1:
             st.markdown("""
+                        **Resumen de Métricas/Indicadores**
+                        
+                        - Visita a clientes.
+                        - Avance de objetivos.
+                        - Detalle clientes.
+                        - Ventas por proveedor
+                        - Saldo de cuenta
+
+                        """)
+        
+        
+        
+
+        col1, col3 = st.columns([4, 4],vertical_alignment="center")   
+        with col1:
+            st.markdown("""
+            <!-- Sección de etiquetas alineadas a la izquierda -->
+            <div>
+                <span class="tag-python">Python</span>
+                <span class="tag-powerbi">Power BI</span>
+                <span class="tag-looker">Looker</span>
+            </div>
+            </div>
+    """, unsafe_allow_html=True)
+        
+        with col3:
+            if st.button("Ver mas sobre este proyecto 🚀"):
+                st.switch_page("pages/2_bt.py")
 
 
-Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** de una distribuidora de **telas denim** a:""")
 
-        st.markdown("""- Monitorear visitas a clientes.
-- Alcanzar sus metas de ventas mensuales.""")
-
-        if st.button("Ver mas sobre este proyecto"):
-            st.switch_page("pages/2_bt.py")
 
 
 # MONITOREO LLAMADAS
@@ -104,8 +118,9 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
     with colB:
 
         st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
+        st.write("")
 
-        col1, col3 = st.columns([3, 4])
+        col1, col3 = st.columns([3, 4],vertical_alignment="top")
 
         with col3:
             st.image("imgs/call1.png")
@@ -120,6 +135,9 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
         if st.button("Ver mas sobre este proyecto", key=1):
             st.switch_page("pages/1_cat.py")
 
+
+    st.divider()
+
     # SEGUNDA FILA DE TRABAJOS
 
     colA, colB = st.columns([4, 4])
@@ -127,7 +145,7 @@ Este **tablero para móviles** tiene como objetivo ayudar a los **vendedores** d
     with colA:
         st.markdown(''' ### **Conectar Igualdad 2021-2023** ''')
 
-        col1, col3 = st.columns([3, 4])
+        col1, col3 = st.columns([3, 4],vertical_alignment="top")
 
         with col3:
             st.image("imgs/conig.png")
@@ -149,7 +167,7 @@ Tablero que tiene como objetivo mostrar el avance de los programas **Conectar Ig
 
         st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
 
-        col1, col3 = st.columns([3, 4])
+        col1, col3 = st.columns([3, 4],vertical_alignment="top")
 
         with col3:
             st.image("imgs/psl.png")

@@ -5,6 +5,7 @@
     border-radius: 5px;
     font-size: 14px;
     margin: 5px ;
+    margin-bottom: 50px; 
 }
 .tag-powerbi {
     background-color: #f2c811;
@@ -13,6 +14,7 @@
     border-radius: 5px;
     font-size: 14px;
     margin: 5px;
+    margin-bottom: 10px; 
 }
 .tag-looker {
     background-color: #4285f4;
@@ -21,6 +23,7 @@
     border-radius: 5px;
     font-size: 14px;
     margin: 5px;
+    margin-bottom: 10px; 
 }
 .tag-sql {
     background-color: #e34f26;
@@ -54,4 +57,14 @@
     border-radius: 5px;
     font-size: 14px;
     margin: 5px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
 }
