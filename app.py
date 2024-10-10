@@ -1,7 +1,7 @@
 import streamlit as st
 
 
-st.set_page_config(page_title="Lucas Sagasta - Data Analyst",page_icon="📊", layout="wide")
+st.set_page_config(page_title="Lucas Sagasta - Data Analyst",page_icon="📊")
 
 
 def main():
@@ -30,6 +30,9 @@ def main():
 # ----------- /SIDEBAR/ -------------
 
 
+# ------------- INTRO ---------------
+
+
     st.header(" Lucas Sebastián Sagasta", divider="rainbow")
     st.subheader(
         "Analista de Datos - Científico de Datos - Especialista en IA")
@@ -41,148 +44,164 @@ def main():
     st.write("🛠️ Tengo experiencia en la recolección y procesamiento de datos, disposición, creación de dashboards, y automatización de reportes diarios vía correo electrónico.")
     st.write("🚀 He participado en proyectos clave que han impulsado la toma de decisiones estratégicas dentro de las organizaciones.")
     st.write("🌟 Soy un profesional comprometido con la mejora continua y la innovación, siempre en busca de nuevas formas de aprovechar los datos para generar valor y ventajas competitivas.")
-
     st.write("")
+    st.write("")
+
+    st.header("Portfolio", divider="rainbow")
+    st.write("")
+
+
+# SEGUIMIENTOS DE VISITAS
+# Titulo:
+    st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
+# Tags:
+    st.markdown("""
+                <!-- Sección de etiquetas alineadas a la izquierda -->
+                <div>
+                    <b>Tecnologías: </b>
+                    <span class="tag-python">Python</span>
+                    <span class="tag-powerbi">Power BI</span>
+                    <span class="tag-looker">Looker</span>
+                </div>
+                </div>
+        """, unsafe_allow_html=True)
+    st.write("")
+# Descripción:
+    st.markdown("""Tablero para móviles diseñado para ayudar a sus vendedores a mantenerse al día con las visitas a sus cartera de clientes y alcanzar sus metas de ventas mensuales. 
+                """)
+    st.markdown("""Tablero para móviles diseñado para ayudar a sus vendedores a mantenerse al día con las visitas a sus cartera de clientes y alcanzar sus metas de ventas mensuales. 
+                """)    
+#Imagenes:    
+    colA, colB, colC = st.columns([5,5,5],vertical_alignment="top")
+    with colA:
+        st.image("imgs/bt1.png")
+    with colB:
+        st.image("imgs/bt2.png")
+        st.write("")
+    with colC:
+        st.image("imgs/bt3.png")
+# Botón de detalle:
+    colA, colB, colC = st.columns([5,10,5],vertical_alignment="top")
+    with colB:
+        if st.button("Ver más sobre este proyecto",icon=":material/search:",use_container_width = True ,type="primary"):
+            st.switch_page("pages/2_bt.py")
+#-----------FIN PROYECTO---------------
+    st.divider()
+
+
+# CALL CENTER
+# Titulo:
+    st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
+# Tags:
+    st.markdown("""
+                <!-- Sección de etiquetas alineadas a la izquierda -->
+                <div>
+                    <b>Tecnologías: </b>
+                    <span class="tag-python">Python</span>
+                    <span class="tag-powerbi">Power BI</span>
+                    <span class="tag-looker">Looker</span>
+                </div>
+                </div>
+        """, unsafe_allow_html=True)
+    st.write("")
+# Descripción:
+    st.markdown("""
+                    Este tablero de control fue diseñado para el Centro de Atención Telefónica del Ministerio de Educación, que gestiona incidencias de los programas Conectar Igualdad y Conectividad Nacional.
+                    \nFacilita el monitoreo del desempeño tanto del área como de cada agente, permitiendo identificar áreas de mejora y asegurar la eficiencia operativa.
+                    \nA través de un análisis detallado de métricas clave, ayuda a optimizar la gestión, mejorar la toma de decisiones y garantizar que el servicio mantenga altos estándares de calidad en la atención a los usuarios.
+                    
+                """)   
+#Imagenes:    
+    colA, colB, colC = st.columns([5,5,5],vertical_alignment="top")
+    with colA:
+        st.image("imgs/cat3.png")
+    with colB:
+        st.image("imgs/cat1.png")
+        st.write("")
+    with colC:
+        st.image("imgs/cat2.png")
+# Botón de detalle:
+    colA, colB, colC = st.columns([5,10,5],vertical_alignment="top")
+    with colB:
+        if st.button("Ver más sobre este proyecto",icon=":material/search:",use_container_width = True ,type="primary", key = 2):
+            st.switch_page("pages/2_bt.py")
+#-----------FIN PROYECTO----------------
+    st.divider()
+    
+    
+
+# CALL CENTER
+# Titulo:
+    st.markdown(''' ### **Conectar Igualdad 2021 - 2023** ''')
+# Tags:
+    st.markdown("""
+                <!-- Sección de etiquetas alineadas a la izquierda -->
+                <div>
+                    <b>Tecnologías: </b>
+                    <span class="tag-python">Python</span>
+                    <span class="tag-powerbi">Power BI</span>
+                    <span class="tag-looker">Looker</span>
+                </div>
+                </div>
+        """, unsafe_allow_html=True)
+    st.write("")
+# Descripción:
+    st.markdown("""
+                    Este tablero de control muestra el avance de los programas Conectar Igualdad y Conectividad Nacional entre 2021 y 2023. 
+                    \nSu propósito es monitorear el estado de entrega de netbooks y el estado de conectividad en las instituciones educativas. 
+                    \nTambién ofrece información sobre el tipo de equipamiento instalado, permitiendo un seguimiento detallado del progreso de ambos programas y asegurando que se cumplan los objetivos de inclusión digital y mejora de la conectividad en todo el país.
+                """)   
+#Imagenes:    
+    colA, colB, colC = st.columns([5,5,5],vertical_alignment="top")
+    with colA:
+        st.image("imgs/ci1.png")
+    with colB:
+        st.image("imgs/ci3.png")
+        st.write("")
+    with colC:
+        st.image("imgs/ci2.png")
+# Botón de detalle:
+    colA, colB, colC = st.columns([5,10,5],vertical_alignment="top")
+    with colB:
+        if st.button("Ver más sobre este proyecto",icon=":material/search:",use_container_width = True ,type="primary", key = 3):
+            st.switch_page("pages/2_bt.py")
+#-----------FIN PROYECTO----------------
+    st.divider()
 
     
 
-    st.write("")
-
-    st.write("")
-
-    st.write("")
-
-    st.header("Algunos de mis trabajos", divider="rainbow")
-    st.write("")
-
-# PRIMER FILA DE TRABAJOS
-    colA, colB = st.columns([4, 4])
-# SEGUIMIENTOS DE VISITAS
-    with colA:
-        st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
-
-
-        st.markdown("""Resúmen:
-                    \nTablero para móviles diseñado para ayudar a sus vendedores a mantenerse al día con las visitas a sus cartera de clientes y alcanzar sus metas de ventas mensuales. 
-                    \nEste tablero permite monitorear las visitas realizadas, sus objetivos de ventas, y visualizar de manera clara y sencilla su progreso hacia dichas metas. 
-                    \nAdemás, el tablero integra información actualizada automáticamente, asegurando que los vendedores siempre tengan acceso a datos precisos y al día. 
-                    \nLa iniciativa busca no solo optimizar la eficiencia operativa, sino también fortalecer las relaciones comerciales mediante una atención regular y oportuna con cada cliente.""")
 
 
 
 
 
-        col1, col3 = st.columns([.5, .5],vertical_alignment="center")
 
-        with col3:
-            st.image("imgs/seguimiento1.jpg")
-            
 
-        with col1:
-            st.markdown("""
-                        **Resumen de Métricas/Indicadores**
-                        
-                        - Visita a clientes.
-                        - Avance de objetivos.
-                        - Detalle clientes.
-                        - Ventas por proveedor
-                        - Saldo de cuenta
 
-                        """)
-        
+
+
+
+
+
+
+
+
+
+    
+
+
+
         
         
 
-        col1, col3 = st.columns([4, 4],vertical_alignment="center")   
-        with col1:
-            st.markdown("""
-            <!-- Sección de etiquetas alineadas a la izquierda -->
-            <div>
-                <span class="tag-python">Python</span>
-                <span class="tag-powerbi">Power BI</span>
-                <span class="tag-looker">Looker</span>
-            </div>
-            </div>
-    """, unsafe_allow_html=True)
+
+
+
+
+
         
-        with col3:
-            if st.button("Ver mas sobre este proyecto 🚀"):
-                st.switch_page("pages/2_bt.py")
+    
 
-
-
-
-
-# MONITOREO LLAMADAS
-
-    with colB:
-
-        st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
-        st.write("")
-
-        col1, col3 = st.columns([3, 4],vertical_alignment="top")
-
-        with col3:
-            st.image("imgs/call1.png")
-
-        with col1:
-            st.markdown("""
-        Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:""")
-        st.markdown(""" 
-        - Monitorear el desempeño del área y de cada agente.
-        - Identificar áreas de mejora.
-        - Asegurar una operación eficiente.""")
-        if st.button("Ver mas sobre este proyecto", key=1):
-            st.switch_page("pages/1_cat.py")
-
-
-    st.divider()
-
-    # SEGUNDA FILA DE TRABAJOS
-
-    colA, colB = st.columns([4, 4])
-# CONIG
-    with colA:
-        st.markdown(''' ### **Conectar Igualdad 2021-2023** ''')
-
-        col1, col3 = st.columns([3, 4],vertical_alignment="top")
-
-        with col3:
-            st.image("imgs/conig.png")
-
-        with col1:
-            st.markdown("""
-
-
-Tablero que tiene como objetivo mostrar el avance de los programas **Conectar Igualdad** y el **Programa de Conectividad Nacional** durante el periodo comprendido entre 2021 y 2023.
-""")
-        st.markdown("""
-- Monitoreo de estado de la entrega de Netbooks
-- Monitoreo del estado de conectividad y tipo de equipamiento instalado.""")
-
-        if st.button("Ver mas sobre este proyecto", key=2):
-            st.switch_page("pages/2_bt.py")
-# TABLERO 4
-    with colB:
-
-        st.markdown(''' ### **Monitoreo: Centro de Atención Telefónica** ''')
-
-        col1, col3 = st.columns([3, 4],vertical_alignment="top")
-
-        with col3:
-            st.image("imgs/psl.png")
-
-        with col1:
-            st.markdown("""
-        Este **tablero de control** fue creado para ayudar al **Centro de Atención Telefónica del Ministerio de Educación de la Nación**, que gestiona incidencias de los programas **Conectar Igualdad** y **Conectividad Nacional**, a:
-        """)
-        st.markdown("""
-        - Monitorear el desempeño del área y de cada agente.
-        - Identificar áreas de mejora.
-        - Asegurar una operación eficiente.""")
-
-        if st.button("Ver mas sobre este proyecto", key=3):
-            st.switch_page("pages/1_cat.py")
 
 
 # ------------------------------------

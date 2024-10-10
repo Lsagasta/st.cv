@@ -1,6 +1,6 @@
 import streamlit as st
 
-st.set_page_config(page_title = "Lucas Sagasta",page_icon = "📊", layout="wide")
+st.set_page_config(page_title = "Lucas Sagasta",page_icon = "📊")
 
 def main():
     # Importo Estilos CSS
@@ -29,24 +29,7 @@ def main():
 
     st.write("BT")
 
-
-    st.markdown("""
-        <div class="flex-container">
-            <!-- Sección de etiquetas alineadas a la izquierda -->
-            <div>
-                <span class="tag-python">Python</span>
-                <span class="tag-powerbi">Power BI</span>
-                <span class="tag-looker">Looker</span>
-            </div>
-            <!-- Botón alineado a la derecha -->
-            <div>
-                <button class="custom-button">Ver más sobre este proyecto 🚀</button>
-            </div>
-        </div>
-    """, unsafe_allow_html=True)
-
-
-
+    st.image("imgs/bt4.png")
 
 
 
