@@ -1,27 +1,27 @@
 .tag-python {
-    background-color: #306998;
-    color: white;
-    padding: 5px 10px;
+    background-color: #edede9;
+    color: black;
+    padding: 2px 10px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 10px;
     margin: 5px ;
     margin-bottom: 50px; 
 }
 .tag-powerbi {
-    background-color: #f2c811;
+    background-color: #edede9;
     color: black;
-    padding: 5px 10px;
+    padding: 2px 10px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 10px;
     margin: 5px;
     margin-bottom: 10px; 
 }
 .tag-looker {
-    background-color: #4285f4;
-    color: white;
-    padding: 5px 10px;
+    background-color: #edede9;
+    color: black;
+    padding: 2px 10px;
     border-radius: 5px;
-    font-size: 14px;
+    font-size: 10px;
     margin: 5px;
     margin-bottom: 10px; 
 }

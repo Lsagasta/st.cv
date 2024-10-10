@@ -55,7 +55,6 @@ def main():
     st.header("Algunos de mis trabajos", divider="rainbow")
     st.write("")
 
-
 # PRIMER FILA DE TRABAJOS
     colA, colB = st.columns([4, 4])
 # SEGUIMIENTOS DE VISITAS
@@ -63,7 +62,8 @@ def main():
         st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
 
 
-        st.markdown("""Tablero para móviles diseñado para ayudar a sus vendedores a mantenerse al día con las visitas a sus cartera de clientes y alcanzar sus metas de ventas mensuales. 
+        st.markdown("""Resúmen:
+                    \nTablero para móviles diseñado para ayudar a sus vendedores a mantenerse al día con las visitas a sus cartera de clientes y alcanzar sus metas de ventas mensuales. 
                     \nEste tablero permite monitorear las visitas realizadas, sus objetivos de ventas, y visualizar de manera clara y sencilla su progreso hacia dichas metas. 
                     \nAdemás, el tablero integra información actualizada automáticamente, asegurando que los vendedores siempre tengan acceso a datos precisos y al día. 
                     \nLa iniciativa busca no solo optimizar la eficiencia operativa, sino también fortalecer las relaciones comerciales mediante una atención regular y oportuna con cada cliente.""")
