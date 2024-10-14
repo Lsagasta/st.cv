@@ -75,6 +75,23 @@ def main():
     if st.button("Ver portfolio completo", icon=":material/search:", use_container_width=True, type="primary"):
         st.switch_page("pages/1_portfolio.py")
 
+    st.header("Tecnologías en las que me especializo", divider="rainbow")
+    st.write("")
+
+    col1, col2, col3, col4, col5, col6 = st.columns([5, 5, 5, 5, 5, 5])
+    with col1:
+        st.image("imgs/python.png")
+    with col2:
+        st.image("imgs/looker.png")
+    with col3:
+        st.image("imgs/apscripst.png")
+    with col4:
+        st.image("imgs/grafana.png")
+    with col5:
+        st.image("imgs/powerbi.png")
+    with col6:
+        st.image("imgs/sql.png")
+
 
 # ------------------------------------
 # EJECUTAR MAIN
