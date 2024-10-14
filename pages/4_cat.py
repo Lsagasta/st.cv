@@ -1,6 +1,7 @@
 import streamlit as st
 
-st.set_page_config(page_title = "Lucas Sagasta",page_icon = "📊", layout="wide")
+st.set_page_config(page_title="Lucas Sagasta", page_icon="📊", layout="wide")
+
 
 def main():
     with open('styles.css') as f:
@@ -25,7 +26,6 @@ def main():
     )
 # ----------- /SIDEBAR/ -------------
 
-
     st.write("cat")
 
     st.subheader("Herramientas y Tecnologías:")
@@ -41,6 +41,7 @@ def main():
     <span class="tag-Echarts">Apache Echarts</span>
 </div>
 """, unsafe_allow_html=True)
+
 
 # ------------------------------------
 # EJECUTAR MAIN
