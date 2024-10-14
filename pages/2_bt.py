@@ -1,5 +1,5 @@
 import streamlit as st
-
+import utilidades as ut
 st.set_page_config(page_title="Lucas Sagasta", page_icon="📊")
 
 
@@ -8,22 +8,22 @@ def main():
     with open("styles.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
-    # ----------- SIDEBAR -------------
-
-    st.sidebar.image("imgs/perfilLS.png", width=180)
-    st.sidebar.write(
-        '"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
-    # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
+# ----------- SIDEBAR -------------
+    st.sidebar.image("imgs/perfilLS.png", use_column_width=True)
+    # st.sidebar.write(
+    # '"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
+    ut.generarMenu()
+        #Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
     with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
         pdf_data = file.read()
-
     # Crear el botón de descarga para el PDF
     st.sidebar.download_button(
-        type="secondary",
+        type="primary",
         label="📄 Descarga mi CV",
         data=pdf_data,
         file_name="lucas-sagasta-cv.pdf",
         mime="application/pdf",
+        use_container_width= True,
     )
 # ----------- /SIDEBAR/ -------------
     # SEGUIMIENTOS DE VISITAS

@@ -5,4 +5,6 @@ def generarMenu():
     with st.sidebar:
         st.page_link("app.py", label="Inicio", icon=":material/home:")
         st.page_link("pages/1_portfolio.py", label="Portfolio",
-                     icon=":material/monitoring:")
+                    icon=":material/monitoring:")
+        st.page_link("pages/contacto.py", label="Contacto",
+                    icon=":material/contact_mail:")

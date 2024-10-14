@@ -12,24 +12,22 @@ def main():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # ----------- SIDEBAR -------------
-
     st.sidebar.image("imgs/perfilLS.png", use_column_width=True)
     # st.sidebar.write(
     # '"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
-    # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
-   # with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
-    #  pdf_data = file.read()
-
-    # Crear el botón de descarga para el PDF
-   # st.sidebar.download_button(
-    #    type="secondary",
-    #   label="📄 Descarga mi CV",
-    #   data=pdf_data,
-    #   file_name="lucas-sagasta-cv.pdf",
-    #  mime="application/pdf",
-
-  #  )
     ut.generarMenu()
+        #Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
+    with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
+        pdf_data = file.read()
+    # Crear el botón de descarga para el PDF
+    st.sidebar.download_button(
+        type="primary",
+        label="📄 Descarga mi CV",
+        data=pdf_data,
+        file_name="lucas-sagasta-cv.pdf",
+        mime="application/pdf",
+        use_container_width= True,
+    )
 # ----------- /SIDEBAR/ -------------
 
 
@@ -46,6 +44,7 @@ def main():
     st.write("🛠️ Tengo experiencia en la recolección y procesamiento de datos, disposición, creación de dashboards, y automatización de reportes diarios vía correo electrónico.")
     st.write("🚀 He participado en proyectos clave que han impulsado la toma de decisiones estratégicas dentro de las organizaciones.")
     st.write("🌟 Soy un profesional comprometido con la mejora continua y la innovación, siempre en busca de nuevas formas de aprovechar los datos para generar valor y ventajas competitivas.")
+
     st.write("")
     st.write("")
 
@@ -78,8 +77,8 @@ def main():
     st.write("")
     st.write("")
 
-    st.header("Proyectos", divider="rainbow")
-    st.write("Mirá algunos de mis proyectos personales y academicos")
+   # st.header("Proyectos", divider="rainbow")
+   # st.write("Mirá algunos de mis proyectos personales y academicos")
 
     st.write("")
     st.write("")
@@ -89,17 +88,49 @@ def main():
 
     col1, col2, col3, col4, col5, col6 = st.columns([5, 5, 5, 5, 5, 5])
     with col1:
-        st.image("imgs/python.png")
+        st.image("imgs/python.png",width=50)
+        st.markdown("""
+                <div>
+                    <span class="tag-crema">Python</span>
+                </div>
+                    """, unsafe_allow_html=True)
     with col2:
-        st.image("imgs/looker.png")
+        st.image("imgs/looker.png",width=50)
+        st.markdown("""
+                <div>
+                    <span class="tag-crema">Looker</span>
+                </div>
+                    """, unsafe_allow_html=True)
+        
     with col3:
-        st.image("imgs/apscripst.png")
+        st.image("imgs/apscripst.png",width=50)
+        st.markdown("""
+                <div>
+                    <span class="tag-crema">Apps Scripts</span>
+                </div>
+                    """, unsafe_allow_html=True)
     with col4:
-        st.image("imgs/grafana.png")
+        st.image("imgs/grafana.png",width=50)
+        st.markdown("""
+                <div>
+                    <span class="tag-crema">Grafana</span>
+                </div>
+                    """, unsafe_allow_html=True)
     with col5:
-        st.image("imgs/powerbi.png")
+        st.image("imgs/powerbi.png",width=50)
+        st.markdown("""
+                <div>
+                    <span class="tag-crema">Power BI</span>
+                </div>
+                    """, unsafe_allow_html=True)
     with col6:
-        st.image("imgs/sql.png")
+        st.image("imgs/sql.png",width=50)
+        st.markdown("""
+                <div>
+                    <span class="tag-crema">SQL Server</span>
+                </div>
+                    """, unsafe_allow_html=True)
+
 
 
 # ------------------------------------

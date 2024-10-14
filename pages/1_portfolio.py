@@ -12,24 +12,22 @@ def main():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
 # ----------- SIDEBAR -------------
-
     st.sidebar.image("imgs/perfilLS.png", use_column_width=True)
     # st.sidebar.write(
     # '"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
-    # Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
-   # with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
-    #  pdf_data = file.read()
-
-    # Crear el botón de descarga para el PDF
-   # st.sidebar.download_button(
-    #    type="secondary",
-    #   label="📄 Descarga mi CV",
-    #   data=pdf_data,
-    #   file_name="lucas-sagasta-cv.pdf",
-    #  mime="application/pdf",
-
-  #  )
     ut.generarMenu()
+        #Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
+    with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
+        pdf_data = file.read()
+    # Crear el botón de descarga para el PDF
+    st.sidebar.download_button(
+        type="primary",
+        label="📄 Descarga mi CV",
+        data=pdf_data,
+        file_name="lucas-sagasta-cv.pdf",
+        mime="application/pdf",
+        use_container_width= True,
+    )
 # ----------- /SIDEBAR/ -------------
 
 
@@ -42,13 +40,13 @@ def main():
 # Titulo:
     st.markdown(''' ### **Seguimiento de visitas para vendedores** ''')
 # Tags:
-    st.markdown("""
+    mensaje = st.markdown("""
                 <!-- Sección de etiquetas alineadas a la izquierda -->
                 <div>
                     <b>Tecnologías: </b>
-                    <span class="tag-python">Python</span>
-                    <span class="tag-powerbi">Power BI</span>
-                    <span class="tag-looker">Looker</span>
+                    <span class="tag-verde">Python</span>
+                    <span class="tag-verde">Power BI</span>
+                    <span class="tag-verde">Looker</span>
                 </div>
                 </div>
         """, unsafe_allow_html=True)
@@ -84,9 +82,9 @@ def main():
                 <!-- Sección de etiquetas alineadas a la izquierda -->
                 <div>
                     <b>Tecnologías: </b>
-                    <span class="tag-python">Python</span>
-                    <span class="tag-powerbi">Power BI</span>
-                    <span class="tag-looker">Looker</span>
+                    <span class="tag-salmon">Python</span>
+                    <span class="tag-salmon">Power BI</span>
+                    <span class="tag-salmon">Looker</span>
                 </div>
                 </div>
         """, unsafe_allow_html=True)
@@ -111,9 +109,10 @@ def main():
     colA, colB, colC = st.columns([5, 10, 5], vertical_alignment="top")
     with colB:
         if st.button("Ver más sobre este proyecto", icon=":material/search:", use_container_width=True, type="primary", key=2):
-            st.switch_page("pages/2_bt.py")
+            st.switch_page("pages/4_cat.py")
 # -----------FIN PROYECTO----------------
     st.divider()
+
 
 
 # CALL CENTER
@@ -124,14 +123,15 @@ def main():
                 <!-- Sección de etiquetas alineadas a la izquierda -->
                 <div>
                     <b>Tecnologías: </b>
-                    <span class="tag-python">Python</span>
-                    <span class="tag-powerbi">Power BI</span>
-                    <span class="tag-looker">Looker</span>
+                    <span class="tag-celeste">Python</span>
+                    <span class="tag-celeste">Power BI</span>
+                    <span class="tag-celeste">Looker</span>
                 </div>
                 </div>
         """, unsafe_allow_html=True)
     st.write("")
-# Descripción:
+
+    # Descripción:
     st.markdown("""
                     Este tablero de control muestra el avance de los programas Conectar Igualdad y Conectividad Nacional entre 2021 y 2023. 
                     \nSu propósito es monitorear el estado de entrega de netbooks y el estado de conectividad en las instituciones educativas. 
