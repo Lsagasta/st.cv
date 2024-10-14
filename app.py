@@ -75,7 +75,16 @@ def main():
     if st.button("Ver portfolio completo", icon=":material/search:", use_container_width=True, type="primary"):
         st.switch_page("pages/1_portfolio.py")
 
-    st.header("Tecnologías en las que me especializo", divider="rainbow")
+    st.write("")
+    st.write("")
+
+    st.header("Proyectos", divider="rainbow")
+    st.write("Mirá algunos de mis proyectos personales y academicos")
+
+    st.write("")
+    st.write("")
+
+    st.header("Tecnologías con las que trabajo", divider="rainbow")
     st.write("")
 
     col1, col2, col3, col4, col5, col6 = st.columns([5, 5, 5, 5, 5, 5])
