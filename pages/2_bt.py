@@ -1,6 +1,6 @@
 import streamlit as st
 import utilidades as ut
-st.set_page_config(page_title="Lucas Sagasta", page_icon="📊")
+st.set_page_config(page_title="Lucas Sagasta", page_icon="📊", layout="centered")
 
 
 def main():

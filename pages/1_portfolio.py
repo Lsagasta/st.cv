@@ -2,7 +2,7 @@ import streamlit as st
 import utilidades as ut
 
 
-st.set_page_config(page_title="Lucas Sagasta - Data Analyst", page_icon="📊")
+st.set_page_config(page_title="Lucas Sagasta - Data Analyst", page_icon="📊", layout="centered")
 
 
 def main():
@@ -44,9 +44,10 @@ def main():
                 <!-- Sección de etiquetas alineadas a la izquierda -->
                 <div>
                     <b>Tecnologías: </b>
-                    <span class="tag-verde">Python</span>
-                    <span class="tag-verde">Power BI</span>
+                    <span class="tag-verde">Google Apps Script</span>
+                    <span class="tag-verde">Big query</span>
                     <span class="tag-verde">Looker</span>
+                    <span class="tag-verde">SQL</span>
                 </div>
                 </div>
         """, unsafe_allow_html=True)
@@ -83,8 +84,9 @@ def main():
                 <div>
                     <b>Tecnologías: </b>
                     <span class="tag-salmon">Python</span>
-                    <span class="tag-salmon">Power BI</span>
-                    <span class="tag-salmon">Looker</span>
+                    <span class="tag-salmon">Grafana</span>
+                    <span class="tag-salmon">Apache E-charts</span>
+                    <span class="tag-salmon">SQL</span>
                 </div>
                 </div>
         """, unsafe_allow_html=True)
@@ -124,7 +126,7 @@ def main():
                 <div>
                     <b>Tecnologías: </b>
                     <span class="tag-celeste">Python</span>
-                    <span class="tag-celeste">Power BI</span>
+                    <span class="tag-celeste">Google Apps Script</span>
                     <span class="tag-celeste">Looker</span>
                 </div>
                 </div>
@@ -150,7 +152,7 @@ def main():
     colA, colB, colC = st.columns([5, 10, 5], vertical_alignment="top")
     with colB:
         if st.button("Ver más sobre este proyecto", icon=":material/search:", use_container_width=True, type="primary", key=3):
-            st.switch_page("pages/2_bt.py")
+            st.switch_page("pages/5_ci.py")
 # -----------FIN PROYECTO----------------
     st.divider()
 

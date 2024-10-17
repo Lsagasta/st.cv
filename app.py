@@ -2,7 +2,7 @@ import streamlit as st
 import utilidades as ut
 
 
-st.set_page_config(page_title="Lucas Sagasta - Data Analyst", page_icon="📊")
+st.set_page_config(page_title="Lucas Sagasta - Data Analyst", page_icon="📊", layout="centered")
 
 
 def main():
@@ -34,22 +34,30 @@ def main():
 # ------------- INTRO ---------------
 
     st.header(" Lucas Sebastián Sagasta", divider="rainbow")
-    st.subheader(
-        "Analista de Datos - Científico de Datos - Especialista en IA")
+    st.subheader("Analista de Datos - Científico de Datos - Especialista en IA")
 
     st.write("")
 
     st.write("📊 Soy un analista de datos especializado en el seguimiento de operaciones, ventas y logística.")
     st.write("💡 A lo largo de mi carrera, he diseñado soluciones de integración de datos y visualización de indicadores utilizando diversas plataformas y tecnologías, como SQL, Python, LookerStudio, Power BI, y Excel, para diferentes sectores industriales.")
     st.write("🛠️ Tengo experiencia en la recolección y procesamiento de datos, disposición, creación de dashboards, y automatización de reportes diarios vía correo electrónico.")
-    st.write("🚀 He participado en proyectos clave que han impulsado la toma de decisiones estratégicas dentro de las organizaciones.")
-    st.write("🌟 Soy un profesional comprometido con la mejora continua y la innovación, siempre en busca de nuevas formas de aprovechar los datos para generar valor y ventajas competitivas.")
+    st.write(":robot_face: Actualmente me encuentro realizando investigaciones para implementar proyectos de Inteligencia Artificial en el ámbito educativo.")
+    st.header("Experiencia", divider="rainbow")
 
-    st.write("")
+    st.markdown("""**Educ.ar - Ministerio de Educación**:
+        \n* Desarrollo de tableros de control y monitoreo en Power BI, Looker y Grafana.
+        \n* Implementación de la automatización de informes diarios, coordinando la recopilación de datos de múltiples áreas.""")
+    st.divider()
+    st.markdown("""
+        \n**Proyectos freelance:**        
+        \n* Conexión y extracción de datos a través de APIs, automatización de procesos con Google Apps Script.
+        \n* Creación de dashboards en Looker.
+        \n* Automatización del envío de correos electrónicos personalizados con reportes de progreso diario y mensual.""")
+        
     st.write("")
 
     st.header("Algunos de mis trabajos", divider="rainbow")
-    st.write("Mira algunos de mi tableros realizados:")
+    st.write("**Una selección de mis tableros y automatizaciones realizadas estos últimos años:**")
 
     col1, col2, col3, col4 = st.columns([5, 5, 5, 5])
     with col1:
@@ -86,6 +94,10 @@ def main():
     st.header("Tecnologías con las que trabajo", divider="rainbow")
     st.write("")
 
+
+
+
+        
     col1, col2, col3, col4, col5, col6 = st.columns([5, 5, 5, 5, 5, 5])
     with col1:
         st.image("imgs/python.png",width=50)
