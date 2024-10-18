@@ -10,8 +10,6 @@ def main():
 
 # ----------- SIDEBAR -------------
     st.sidebar.image("imgs/perfilLS.png", use_column_width=True)
-    # st.sidebar.write(
-    # '"Encuentro soluciones efectivas en el análisis de datos mediante herramientas accesibles y eficientes."')
     ut.generarMenu()
         #Cargar el archivo PDF (asegúrate de que esté en el directorio correcto)
     with open("imgs/Lucas S. Data Analyst.pdf", "rb") as file:
@@ -206,7 +204,7 @@ Este indicador muestra el avance semanal de las cobranzas en porcentaje y valor 
 - **Semana 2:** Avance de cobranza con el 105.47% de cumplimiento.
 - **Semana 3:** Avance de cobranza con el 110.82% de cumplimiento.
 - **Semana 4:** Avance de cobranza del 77.23%, por debajo del estimado.
-  
+
 El avance total hasta el momento se encuentra en un **96.86%**, con una diferencia de -3.14% respecto al estimado.
 
 ## Detalle por Vendedor
